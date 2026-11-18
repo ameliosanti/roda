@@ -103,7 +103,7 @@
   </div>
 
   <div class="parts">
-    <span><b>2</b> bandejas</span><span><b>3</b> laterales</span><span><b>5</b> ruedas</span><span><b>12</b> bulones</span>
+    <span><b>2</b> bandejas</span><span><b>3</b> laterales</span><span><b>5</b> ruedas</span><span><b>1</b> goma EVA</span><span><b>12</b> bulones</span>
   </div>
 
   <div class="credits">Santiago Amelio Ortiz <span class="o">·</span> Diseño Industrial <span class="o">·</span> Cátedra Zamborlini <span class="o">·</span> UP 2026</div>
@@ -172,6 +172,7 @@
     const r = Math.hypot(c.x, c.z) || 1, nx = c.x / r, nz = c.z / r;
     if (name === 'asiento') return new THREE.Vector3(0, 0.26, 0);
     if (name === 'bandeja') return new THREE.Vector3(0, 0.02, 0);
+    if (name === 'goma_eva') return new THREE.Vector3(0, 0.15, 0);
     if (name.startsWith('lateral')) return new THREE.Vector3(nx * 0.2, 0.06, nz * 0.2);
     if (name.startsWith('rueda')) return new THREE.Vector3(nx * 0.03, -0.12, nz * 0.03);
     const top = c.y > 0.25;
